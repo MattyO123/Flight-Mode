@@ -216,8 +216,8 @@ export default function Landing() {
               © 2024 Flight Mode Competitions. All rights reserved. Registered in England & Wales.
             </p>
             <div className="flex items-center mt-4 md:mt-0">
-              <span className="text-gray-400 text-sm mr-4">18+ Only. Gamble Responsibly.</span>
-              <span className="text-gray-400 text-sm">UK Skill-Based Competitions</span>
+              <span className="text-gray-400 text-sm mr-4">18+ UK Residents Only.</span>
+              <span className="text-gray-400 text-sm">Skill-Based Competitions</span>
             </div>
           </div>
         </div>
