@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(220, 39%, 11%);
+  --muted: hsl(220, 14%, 96%);
+  --muted-foreground: hsl(220, 9%, 46%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(220, 39%, 11%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(220, 39%, 11%);
+  --border: hsl(220, 13%, 91%);
+  --input: hsl(220, 13%, 91%);
+  --primary: hsl(43, 89%, 38%);
+  --primary-foreground: hsl(220, 39%, 11%);
+  --secondary: hsl(220, 14%, 96%);
+  --secondary-foreground: hsl(220, 39%, 11%);
+  --accent: hsl(220, 14%, 96%);
+  --accent-foreground: hsl(220, 39%, 11%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(220, 39%, 11%);
+  --radius: 0.5rem;
+  
+  /* Custom Flight Mode colors */
+  --navy-50: hsl(220, 14%, 96%);
+  --navy-700: hsl(220, 25%, 25%);
+  --navy-800: hsl(220, 39%, 18%);
+  --navy-900: hsl(220, 39%, 11%);
+  --gold-400: hsl(43, 96%, 56%);
+  --gold-500: hsl(43, 89%, 38%);
+  --gold-600: hsl(43, 89%, 30%);
+}
+
+.dark {
+  --background: hsl(220, 39%, 11%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(220, 25%, 25%);
+  --muted-foreground: hsl(220, 9%, 64%);
+  --popover: hsl(220, 39%, 11%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(220, 39%, 11%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(220, 25%, 25%);
+  --input: hsl(220, 25%, 25%);
+  --primary: hsl(43, 89%, 38%);
+  --primary-foreground: hsl(220, 39%, 11%);
+  --secondary: hsl(220, 25%, 25%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(220, 25%, 25%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(220, 13%, 91%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .hero-gradient {
+    background: linear-gradient(135deg, hsl(220, 39%, 11%) 0%, hsl(220, 39%, 18%) 100%);
+  }
+  
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(43, 89%, 38%) 0%, hsl(43, 89%, 30%) 100%);
+  }
+  
+  .competition-card {
+    transition: all 0.3s ease;
+  }
+  
+  .competition-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  .countdown-timer {
+    font-variant-numeric: tabular-nums;
+  }
+  
+  .skill-question-modal {
+    backdrop-filter: blur(10px);
+  }
+  
+  .navbar-blur {
+    backdrop-filter: blur(12px);
+  }
+}
+
+@layer utilities {
+  .text-navy-50 { color: hsl(220, 14%, 96%); }
+  .text-navy-700 { color: hsl(220, 25%, 25%); }
+  .text-navy-800 { color: hsl(220, 39%, 18%); }
+  .text-navy-900 { color: hsl(220, 39%, 11%); }
+  .text-gold-400 { color: hsl(43, 96%, 56%); }
+  .text-gold-500 { color: hsl(43, 89%, 38%); }
+  .text-gold-600 { color: hsl(43, 89%, 30%); }
+  
+  .bg-navy-50 { background-color: hsl(220, 14%, 96%); }
+  .bg-navy-700 { background-color: hsl(220, 25%, 25%); }
+  .bg-navy-800 { background-color: hsl(220, 39%, 18%); }
+  .bg-navy-900 { background-color: hsl(220, 39%, 11%); }
+  .bg-gold-400 { background-color: hsl(43, 96%, 56%); }
+  .bg-gold-500 { background-color: hsl(43, 89%, 38%); }
+  .bg-gold-600 { background-color: hsl(43, 89%, 30%); }
+  
+  .border-navy-700 { border-color: hsl(220, 25%, 25%); }
+  .border-gold-500 { border-color: hsl(43, 89%, 38%); }
+  
+  .hover\:bg-navy-800:hover { background-color: hsl(220, 39%, 18%); }
+  .hover\:bg-gold-600:hover { background-color: hsl(43, 89%, 30%); }
+}
