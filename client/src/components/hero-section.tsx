@@ -62,8 +62,8 @@ export default function HeroSection() {
               </Button>
               <Button 
                 variant="outline"
-                className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-navy-900 transition-all duration-300"
-                onClick={() => window.location.href = '#'}
+                className="border-2 border-gold-400 text-gold-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gold-400 hover:text-navy-900 transition-all duration-300"
+                onClick={() => window.location.href = '#how-it-works'}
               >
                 How It Works
               </Button>
