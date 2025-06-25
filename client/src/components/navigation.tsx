@@ -5,7 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Menu, User, LogOut, Trophy, Settings } from "lucide-react";
-import logoPath from "@assets/6F24B64F-C317-4FC4-9A43-79F9EEEC7D10_1750872597226.png";
+import FlightModeLogo from "./flight-mode-logo";
 
 export default function Navigation() {
   const { user, isAuthenticated, isLoading } = useAuth();
@@ -34,10 +34,10 @@ export default function Navigation() {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <a href="/" className="block">
-                <img 
-                  src={logoPath} 
-                  alt="Flight Mode Competitions" 
-                  className="h-10 w-auto"
+                <FlightModeLogo 
+                  variant="full" 
+                  theme="light"
+                  className="h-10"
                 />
               </a>
             </div>

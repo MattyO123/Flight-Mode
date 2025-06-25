@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import CountdownTimer from "./countdown-timer";
 import SkillQuestionModal from "./skill-question-modal";
+import FlightModeLogo from "./flight-mode-logo";
 import { formatCurrency, calculateProgress } from "@/lib/utils";
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
