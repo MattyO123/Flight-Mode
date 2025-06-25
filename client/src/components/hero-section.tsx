@@ -45,24 +45,24 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Hero Content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight mb-6 text-mist-white">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight mb-6 text-soft-cream">
               Win Your Dream <span className="text-champagne-gold">Holiday</span>
             </h1>
-            <p className="text-xl md:text-2xl text-mist-white/80 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-soft-cream/90 mb-8 leading-relaxed mobile-text-spacing">
               Enter skill-based competitions to win luxury travel experiences. From Maldives retreats to Swiss Alps adventures.
             </p>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mobile-button-spacing">
               <Button 
-                className="gold-gradient text-deep-navy px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                className="gold-gradient text-off-navy px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                 onClick={() => window.location.href = '/competitions'}
               >
                 Enter Competition
               </Button>
               <Button 
                 variant="secondary"
-                className="bg-midnight-teal/80 backdrop-blur-sm border border-champagne-gold/30 text-mist-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-champagne-gold hover:text-deep-navy transition-all duration-300"
+                className="bg-navy-charcoal/80 backdrop-blur-sm border border-champagne-gold/50 text-soft-cream px-8 py-4 rounded-full text-lg font-semibold hover:bg-champagne-gold hover:text-off-navy shadow-md transition-all duration-300"
                 onClick={() => window.location.href = '#how-it-works'}
               >
                 How It Works
@@ -72,8 +72,8 @@ export default function HeroSection() {
             {/* Trust Indicators */}
             <div className="mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-8">
               <div className="text-center">
-                <div className="text-2xl font-bold text-gold-400">2,847</div>
-                <div className="text-sm text-gray-400">Happy Winners</div>
+                <div className="text-2xl font-bold text-champagne-gold">2,847</div>
+                <div className="text-sm text-pale-slate">Happy Winners</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-gold-400">£2.4M</div>

@@ -5,55 +5,59 @@
 @tailwind utilities;
 
 :root {
-  /* Flight Mode Brand Colors - User Specified Palette */
+  /* Flight Mode Brand Colors - Updated Palette from UI Evaluation */
   --deep-navy: #0C1C2E;
-  --champagne-gold: #CBAF87;
-  --mist-white: #F5F5F2;
+  --navy-charcoal: #1C2A3A;
+  --off-navy: #0F1F2E;
+  --champagne-gold: #C5A166;
+  --soft-cream: #F3EDE3;
+  --coral-gold: #F49E7D;
+  --pale-slate: #9BAABF;
   --storm-grey: #8D8F98;
   --midnight-teal: #144552;
 
   /* Shadcn/UI Variables */
-  --background: var(--mist-white);
+  --background: var(--soft-cream);
   --foreground: var(--deep-navy);
-  --muted: #F0F0ED;
-  --muted-foreground: var(--storm-grey);
-  --popover: var(--mist-white);
+  --muted: #F0EBDF;
+  --muted-foreground: var(--pale-slate);
+  --popover: var(--soft-cream);
   --popover-foreground: var(--deep-navy);
-  --card: var(--mist-white);
+  --card: var(--soft-cream);
   --card-foreground: var(--deep-navy);
-  --border: #E0E0DD;
-  --input: #EBEBE8;
+  --border: #E5DFCC;
+  --input: #EDE7D8;
   --primary: var(--champagne-gold);
   --primary-foreground: var(--deep-navy);
-  --secondary: #E8E8E5;
+  --secondary: #EBE5D6;
   --secondary-foreground: var(--deep-navy);
   --accent: var(--champagne-gold);
   --accent-foreground: var(--deep-navy);
   --destructive: hsl(0, 84%, 60%);
-  --destructive-foreground: var(--mist-white);
+  --destructive-foreground: var(--soft-cream);
   --ring: var(--champagne-gold);
   --radius: 0.5rem;
 }
 
 .dark {
-  --background: var(--deep-navy);
-  --foreground: var(--mist-white);
-  --muted: var(--midnight-teal);
-  --muted-foreground: var(--storm-grey);
-  --popover: var(--midnight-teal);
-  --popover-foreground: var(--mist-white);
-  --card: var(--midnight-teal);
-  --card-foreground: var(--mist-white);
-  --border: #2A4A57;
-  --input: var(--midnight-teal);
+  --background: var(--off-navy);
+  --foreground: var(--soft-cream);
+  --muted: var(--navy-charcoal);
+  --muted-foreground: var(--pale-slate);
+  --popover: var(--navy-charcoal);
+  --popover-foreground: var(--soft-cream);
+  --card: var(--navy-charcoal);
+  --card-foreground: var(--soft-cream);
+  --border: #2A3A4A;
+  --input: var(--navy-charcoal);
   --primary: var(--champagne-gold);
   --primary-foreground: var(--deep-navy);
-  --secondary: var(--midnight-teal);
-  --secondary-foreground: var(--mist-white);
+  --secondary: var(--navy-charcoal);
+  --secondary-foreground: var(--soft-cream);
   --accent: var(--champagne-gold);
   --accent-foreground: var(--deep-navy);
   --destructive: hsl(0, 62%, 30%);
-  --destructive-foreground: var(--mist-white);
+  --destructive-foreground: var(--soft-cream);
   --ring: var(--champagne-gold);
 }
 
@@ -64,6 +68,8 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
+    font-size: 16px; /* Increased base font size for better mobile legibility */
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -73,11 +79,16 @@
 
 @layer components {
   .hero-gradient {
-    background: linear-gradient(135deg, var(--deep-navy) 0%, var(--midnight-teal) 100%);
+    background: linear-gradient(135deg, var(--off-navy) 0%, var(--navy-charcoal) 100%);
   }
   
   .gold-gradient {
-    background: linear-gradient(135deg, var(--champagne-gold) 0%, #B8A070 100%);
+    background: linear-gradient(135deg, var(--champagne-gold) 0%, #B8956B 100%);
+    box-shadow: 0 4px 16px rgba(197, 161, 102, 0.3);
+  }
+  
+  .coral-gradient {
+    background: linear-gradient(135deg, var(--coral-gold) 0%, #E88B5E 100%);
   }
   
   .competition-card {
@@ -103,21 +114,48 @@
 }
 
 @layer utilities {
-  .text-navy-50 { color: hsl(220, 14%, 96%); }
-  .text-navy-700 { color: hsl(220, 25%, 25%); }
-  .text-navy-800 { color: hsl(220, 39%, 18%); }
-  .text-navy-900 { color: hsl(220, 39%, 11%); }
-  .text-gold-400 { color: hsl(43, 96%, 56%); }
-  .text-gold-500 { color: hsl(43, 89%, 38%); }
-  .text-gold-600 { color: hsl(43, 89%, 30%); }
+  /* Flight Mode Brand Custom Styles */
+  .text-deep-navy { color: var(--deep-navy); }
+  .text-navy-charcoal { color: var(--navy-charcoal); }
+  .text-off-navy { color: var(--off-navy); }
+  .text-champagne-gold { color: var(--champagne-gold); }
+  .text-soft-cream { color: var(--soft-cream); }
+  .text-coral-gold { color: var(--coral-gold); }
+  .text-pale-slate { color: var(--pale-slate); }
+  .text-storm-grey { color: var(--storm-grey); }
+
+  .bg-deep-navy { background-color: var(--deep-navy); }
+  .bg-navy-charcoal { background-color: var(--navy-charcoal); }
+  .bg-off-navy { background-color: var(--off-navy); }
+  .bg-champagne-gold { background-color: var(--champagne-gold); }
+  .bg-soft-cream { background-color: var(--soft-cream); }
+  .bg-coral-gold { background-color: var(--coral-gold); }
+  .bg-pale-slate { background-color: var(--pale-slate); }
+
+  .border-champagne-gold { border-color: var(--champagne-gold); }
+  .border-coral-gold { border-color: var(--coral-gold); }
+  .border-pale-slate { border-color: var(--pale-slate); }
+
+  /* Hover States */
+  .hover\:bg-navy-charcoal:hover { background-color: var(--navy-charcoal); }
+  .hover\:bg-champagne-gold:hover { background-color: var(--champagne-gold); }
+  .hover\:text-champagne-gold:hover { color: var(--champagne-gold); }
+  .hover\:text-deep-navy:hover { color: var(--deep-navy); }
   
-  .bg-navy-50 { background-color: hsl(220, 14%, 96%); }
-  .bg-navy-700 { background-color: hsl(220, 25%, 25%); }
-  .bg-navy-800 { background-color: hsl(220, 39%, 18%); }
-  .bg-navy-900 { background-color: hsl(220, 39%, 11%); }
-  .bg-gold-400 { background-color: hsl(43, 96%, 56%); }
-  .bg-gold-500 { background-color: hsl(43, 89%, 38%); }
-  .bg-gold-600 { background-color: hsl(43, 89%, 30%); }
+  /* Improved mobile margins and spacing */
+  @media (max-width: 768px) {
+    .mobile-padding {
+      @apply px-6 py-4;
+    }
+    
+    .mobile-text-spacing {
+      @apply mb-6;
+    }
+    
+    .mobile-button-spacing {
+      @apply mb-4;
+    }
+  }
   
   .border-navy-700 { border-color: hsl(220, 25%, 25%); }
   .border-gold-500 { border-color: hsl(43, 89%, 38%); }

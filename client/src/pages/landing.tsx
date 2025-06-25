@@ -4,7 +4,8 @@ import { useQuery } from "@tanstack/react-query";
 import { Competition } from "@shared/schema";
 import CompetitionCard from "@/components/competition-card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Clock, Trophy, Shield } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Calendar, Shield, Award, Users } from "lucide-react";
 
 export default function Landing() {
   const { data: competitions, isLoading } = useQuery<Competition[]>({
@@ -14,7 +15,7 @@ export default function Landing() {
   const featuredCompetitions = competitions?.slice(0, 3) || [];
 
   return (
-    <div className="min-h-screen bg-mist-white">
+    <div className="min-h-screen bg-soft-cream">
       <Navigation />
       <HeroSection />
       
@@ -60,45 +61,45 @@ export default function Landing() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-20 bg-mist-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="how-it-works" className="py-20 bg-soft-cream">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mobile-padding">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-navy mb-6">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-off-navy mb-6">
               How It Works
             </h2>
-            <p className="text-xl text-storm-grey max-w-3xl mx-auto">
+            <p className="text-xl text-pale-slate max-w-3xl mx-auto mobile-text-spacing">
               Three simple steps to win your dream holiday. All competitions are skill-based and legally compliant.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
-              <div className="bg-champagne-gold text-deep-navy w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+              <div className="bg-champagne-gold text-off-navy w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
                 1
               </div>
-              <h3 className="text-2xl font-serif font-bold text-deep-navy mb-4">Choose Competition</h3>
-              <p className="text-storm-grey leading-relaxed">
+              <h3 className="text-2xl font-serif font-bold text-off-navy mb-4">Choose Competition</h3>
+              <p className="text-pale-slate leading-relaxed">
                 Browse our curated selection of luxury travel experiences and pick your dream destination.
               </p>
             </div>
             
             <div className="text-center">
-              <div className="bg-gold-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+              <div className="bg-champagne-gold text-off-navy w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
                 2
               </div>
-              <h3 className="text-2xl font-serif font-bold text-navy-900 mb-4">Answer Skill Question</h3>
-              <p className="text-navy-700 leading-relaxed">
-                Complete our skill-based question or mini-game. No luck involved - it's all about knowledge and skill.
+              <h3 className="text-2xl font-serif font-bold text-off-navy mb-4">Answer Skill Question</h3>
+              <p className="text-pale-slate leading-relaxed">
+                Demonstrate your knowledge with our carefully crafted skill-based questions. No luck required.
               </p>
             </div>
             
             <div className="text-center">
-              <div className="bg-gold-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+              <div className="bg-champagne-gold text-off-navy w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
                 3
               </div>
-              <h3 className="text-2xl font-serif font-bold text-navy-900 mb-4">Win Your Dream Trip</h3>
-              <p className="text-navy-700 leading-relaxed">
-                If selected, we'll arrange everything for your luxury holiday. Travel dates flexible to suit you.
+              <h3 className="text-2xl font-serif font-bold text-off-navy mb-4">Win & Travel</h3>
+              <p className="text-pale-slate leading-relaxed">
+                Get your entry confirmed and wait for results. Winners are contacted within 48 hours of competition end.
               </p>
             </div>
           </div>
@@ -178,46 +179,63 @@ export default function Landing() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-deep-navy text-mist-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <footer className="bg-off-navy text-soft-cream py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mobile-padding">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-1">
               <h3 className="text-2xl font-serif font-bold mb-4">Flight Mode</h3>
-              <p className="text-storm-grey mb-6">Win luxury travel experiences through skill-based competitions.</p>
+              <p className="text-pale-slate mb-6">Win luxury travel experiences through skill-based competitions.</p>
+              
+              {/* Trust Elements */}
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="flex items-center text-champagne-gold">
+                  <Shield className="w-5 h-5 mr-2" />
+                  <span className="text-sm">Secure Payments</span>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center text-champagne-gold">
+                  <Award className="w-5 h-5 mr-2" />
+                  <span className="text-sm">UK Regulated</span>
+                </div>
+              </div>
             </div>
             
             <div>
               <h4 className="text-lg font-semibold mb-4">Competitions</h4>
               <ul className="space-y-2">
-                <li><a href="/competitions" className="text-storm-grey hover:text-champagne-gold transition-colors">Current Competitions</a></li>
-                <li><a href="#" className="text-storm-grey hover:text-champagne-gold transition-colors">Competition Rules</a></li>
+                <li><a href="/competitions" className="text-pale-slate hover:text-champagne-gold transition-colors">Current Competitions</a></li>
+                <li><a href="#" className="text-pale-slate hover:text-champagne-gold transition-colors">Competition Rules</a></li>
               </ul>
             </div>
             
             <div>
               <h4 className="text-lg font-semibold mb-4">Support</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-gold-400 transition-colors">Help Center</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-gold-400 transition-colors">Contact Us</a></li>
+                <li><a href="#" className="text-pale-slate hover:text-champagne-gold transition-colors">Help Center</a></li>
+                <li><a href="#" className="text-pale-slate hover:text-champagne-gold transition-colors">Contact Us</a></li>
+                <li><a href="#" className="text-pale-slate hover:text-champagne-gold transition-colors">Winner Reviews</a></li>
               </ul>
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold mb-4">Legal</h4>
+              <h4 className="text-lg font-semibold mb-4">Legal & Trust</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-gold-400 transition-colors">Terms & Conditions</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-gold-400 transition-colors">Privacy Policy</a></li>
+                <li><a href="/terms" className="text-pale-slate hover:text-champagne-gold transition-colors">Terms & Conditions</a></li>
+                <li><a href="#" className="text-pale-slate hover:text-champagne-gold transition-colors">Privacy Policy</a></li>
+                <li><a href="#" className="text-pale-slate hover:text-champagne-gold transition-colors">Competition Rules</a></li>
+                <li><a href="#" className="text-pale-slate hover:text-champagne-gold transition-colors">Postal Entry</a></li>
               </ul>
             </div>
           </div>
           
-          <div className="border-t border-midnight-teal mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-storm-grey text-sm">
+          <div className="border-t border-navy-charcoal mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-pale-slate text-sm mobile-text-spacing">
               © 2024 Flight Mode Competitions. All rights reserved. Registered in England & Wales.
             </p>
             <div className="flex items-center mt-4 md:mt-0">
-              <span className="text-storm-grey text-sm mr-4">18+ UK Residents Only.</span>
-              <span className="text-storm-grey text-sm">Skill-Based Competitions</span>
+              <span className="text-pale-slate text-sm mr-4">18+ UK Residents Only.</span>
+              <span className="text-pale-slate text-sm">Skill-Based Competitions</span>
             </div>
           </div>
         </div>

@@ -55,7 +55,7 @@ export default function Dashboard() {
   }) || [];
 
   return (
-    <div className="min-h-screen bg-mist-white">
+    <div className="min-h-screen bg-soft-cream">
       <Navigation />
       
       {/* Header */}
