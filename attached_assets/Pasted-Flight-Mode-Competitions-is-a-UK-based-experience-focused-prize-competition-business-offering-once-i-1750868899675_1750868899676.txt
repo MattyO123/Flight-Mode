@@ -1,0 +1,140 @@
+Flight Mode Competitions is a UK-based experience-focused prize competition business offering once-in-a-lifetime luxury holidays and travel experiences through skill-based competitions. Inspired by aspirational brands and sleek digital experiences, the web app should be immersive, intuitive, mobile-first, and legally compliant under UK skill-based competition laws.
+
+
+
+
+🎯 Objectives
+	•	Create a responsive, secure web application that allows users to:
+	•	View current and upcoming competitions
+	•	Enter competitions via skill-based games or questions
+	•	Register, login, and manage accounts
+	•	Checkout via Stripe (or compliant alternative)
+	•	Track entries, winnings, and refer friends
+	•	Build trust and excitement through UX and branding
+
+
+
+
+⸻
+
+
+
+
+🖥️ Platform Requirements
+
+
+
+
+🔧 Core Features
+	•	Homepage
+	•	Hero section with “live” experience (e.g. countdown, showcase)
+	•	Featured competitions carousel
+	•	CTA buttons: “Enter Now,” “How It Works,” “Explore Prizes”
+	•	Competitions Page
+	•	Competition cards: image, entry price, prize overview, countdown
+	•	Filter/sort by entry price, location, category (e.g. wellness, luxury, adventure)
+	•	Prize detail page with gallery, trip description, terms, number of entries
+	•	Entry Flow
+	•	User must answer a skill-based question or game
+	•	Limit entries per competition
+	•	Bulk entry pricing options
+	•	Live countdown and entry tracker
+	•	Account Area
+	•	Registration/login (email, phone, or social login)
+	•	Dashboard: active entries, past wins, referrals, saved competitions
+	•	Wallet (if applicable for credits)
+	•	KYC/AML optional integration
+	•	Legal Pages
+	•	FAQ, T&Cs, Privacy, Skill-Based Entry Policy
+	•	CMS Integration
+	•	For uploading new competitions, content blocks, and managing user activity
+	•	Admin Panel
+	•	Full competition control, draw automation/manual, user tracking, sales analytics
+
+
+
+
+⸻
+
+
+
+
+🎨 Design & Branding
+	•	Style: Sleek, modern, luxury-travel-inspired
+	•	Color Palette: Deep navy, soft gold, off-white
+	•	Moodboard: Aspirational lifestyle, luxury getaways, minimal design
+	•	Typography: Elegant serif paired with modern sans-serif
+	•	Inspiration: Apple, BOTB, Nitrous Competitions, Revolut, Masterclass
+
+
+
+
+Include the brand assets and logo files provided in the separate folder.
+
+
+
+
+⸻
+
+
+
+
+📱 Technical Specs
+	•	Platform: Web app (mobile-first), responsive
+	•	Tech Stack: Up to Lovable, but should support scalability and future mobile app integration
+	•	Payment: Stripe (with installment support if possible)
+	•	Security: HTTPS, secure user authentication, GDPR-compliant data handling
+	•	Hosting: Recommend a scalable option (e.g. Vercel, AWS, or Netlify)
+	•	SEO: Optimized for launch (metadata, alt text, speed)
+
+
+
+
+⸻
+
+
+
+
+⚖️ Compliance
+	•	Must comply with UK skill-based competition laws
+	•	All entries require answering a question of skill or judgement
+	•	Ensure that the odds are displayed and no gambling elements are present
+	•	Terms, disclaimers, and responsible competition notices embedded
+
+
+
+
+⸻
+
+
+
+
+🗓️ Timeline & Deliverables
+	•	Wireframes: within 1–2 weeks
+	•	UI Designs: within 3–4 weeks
+	•	MVP Build: 6–8 weeks from final designs
+	•	Testing & QA: 1–2 weeks post-MVP
+	•	Full Launch: ~3 months total
+
+
+
+
+⸻
+
+
+
+
+💰 Budget
+
+
+
+
+Our budget is currently lean but strategic. Focus will be on:
+	•	Building a lean MVP
+	•	Ensuring scalability and legal compliance
+	•	Prioritizing UX and brand trust
+
+
+
+
+We are open to recommendations on phased builds, modular design, or payment milestones.
