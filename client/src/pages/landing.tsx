@@ -14,7 +14,7 @@ export default function Landing() {
   const featuredCompetitions = competitions?.slice(0, 3) || [];
 
   return (
-    <div className="min-h-screen bg-navy-50">
+    <div className="min-h-screen bg-cream">
       <Navigation />
       <HeroSection />
       

@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Menu, User, LogOut, Trophy, Settings } from "lucide-react";
+import logoPath from "@assets/6F24B64F-C317-4FC4-9A43-79F9EEEC7D10_1750872597226.png";
 
 export default function Navigation() {
   const { user, isAuthenticated, isLoading } = useAuth();
@@ -26,15 +27,18 @@ export default function Navigation() {
   const currentNavItems = isAuthenticated ? authenticatedNavItems : navItems;
 
   return (
-    <nav className="bg-white/95 navbar-blur sticky top-0 z-50 border-b border-gray-100">
+    <nav className="bg-cream/95 navbar-blur sticky top-0 z-50 border-b border-navy-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <a href="/" className="block">
-                <h1 className="text-2xl font-serif font-bold text-navy-900">Flight Mode</h1>
-                <span className="text-xs text-gold-500 font-medium">COMPETITIONS</span>
+                <img 
+                  src={logoPath} 
+                  alt="Flight Mode Competitions" 
+                  className="h-10 w-auto"
+                />
               </a>
             </div>
           </div>
