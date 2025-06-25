@@ -273,8 +273,12 @@ export default function Checkout() {
                     <div>
                       <p className="text-xs text-gray-600 leading-relaxed">
                         By entering, you confirm you are 18+ and agree to our Terms & Conditions. 
-                        UK skill-based competition. Skill question must be answered correctly to qualify. 
-                        Payment is non-refundable once submitted.
+                        UK skill-based competition. Skill question must be answered correctly to qualify.
+                      </p>
+                      <p className="text-xs text-gray-500 mt-2 leading-relaxed">
+                        Free postal entry: Send name, address, phone number, and correct answer to: 
+                        Flight Mode Competitions, PO Box 1847, Manchester M60 1QS. 
+                        One entry per envelope. Standard postal rates apply.
                       </p>
                     </div>
                   </div>
