@@ -32,27 +32,29 @@ export default function FlightModeLogo({
         
         {/* Airplane symbol */}
         <g transform="translate(40, 40)">
-          {/* Main fuselage */}
+          {/* Main fuselage - longer and more prominent */}
+          <ellipse cx="0" cy="0" rx="18" ry="2.5" fill={goldColor} />
+          
+          {/* Nose cone */}
+          <path d="M 18 0 L 22 -1 L 22 1 Z" fill={goldColor} />
+          
+          {/* Main wings - larger and more airplane-like */}
           <path
-            d="M -12 0 L 15 -1 L 15 1 L -12 0 Z"
+            d="M -8 0 L -12 -12 L 0 -8 L 8 -4 L 0 0 L 8 4 L 0 8 L -12 12 Z"
             fill={goldColor}
           />
           
-          {/* Wings */}
+          {/* Tail wings */}
           <path
-            d="M -8 0 L -2 -8 L 4 -6 L -2 0 L 4 6 L -2 8 Z"
+            d="M -15 0 L -20 -6 L -16 -3 L -15 0 L -16 3 L -20 6 Z"
             fill={goldColor}
           />
           
-          {/* Tail */}
-          <path
-            d="M 12 -1 L 18 -4 L 18 4 L 12 1 Z"
-            fill={goldColor}
-          />
-          
-          {/* Wing details */}
-          <circle cx="-4" cy="0" r="1" fill={navyColor} opacity="0.3"/>
-          <circle cx="2" cy="0" r="0.8" fill={navyColor} opacity="0.3"/>
+          {/* Wing struts for detail */}
+          <line x1="-4" y1="0" x2="-4" y2="-6" stroke={navyColor} strokeWidth="1" opacity="0.4"/>
+          <line x1="-4" y1="0" x2="-4" y2="6" stroke={navyColor} strokeWidth="1" opacity="0.4"/>
+          <line x1="4" y1="0" x2="4" y2="-3" stroke={navyColor} strokeWidth="1" opacity="0.4"/>
+          <line x1="4" y1="0" x2="4" y2="3" stroke={navyColor} strokeWidth="1" opacity="0.4"/>
         </g>
       </svg>
     );
@@ -93,27 +95,29 @@ export default function FlightModeLogo({
         
         {/* Airplane symbol */}
         <g transform="translate(30, 30)">
-          {/* Main fuselage */}
+          {/* Main fuselage - longer and more prominent */}
+          <ellipse cx="0" cy="0" rx="14" ry="2" fill={goldColor} />
+          
+          {/* Nose cone */}
+          <path d="M 14 0 L 17 -0.8 L 17 0.8 Z" fill={goldColor} />
+          
+          {/* Main wings - larger and more airplane-like */}
           <path
-            d="M -9 0 L 11 -0.8 L 11 0.8 L -9 0 Z"
+            d="M -6 0 L -9 -9 L 0 -6 L 6 -3 L 0 0 L 6 3 L 0 6 L -9 9 Z"
             fill={goldColor}
           />
           
-          {/* Wings */}
+          {/* Tail wings */}
           <path
-            d="M -6 0 L -1.5 -6 L 3 -4.5 L -1.5 0 L 3 4.5 L -1.5 6 Z"
+            d="M -11 0 L -15 -4.5 L -12 -2.5 L -11 0 L -12 2.5 L -15 4.5 Z"
             fill={goldColor}
           />
           
-          {/* Tail */}
-          <path
-            d="M 9 -0.8 L 13.5 -3 L 13.5 3 L 9 0.8 Z"
-            fill={goldColor}
-          />
-          
-          {/* Wing details */}
-          <circle cx="-3" cy="0" r="0.8" fill={navyColor} opacity="0.3"/>
-          <circle cx="1.5" cy="0" r="0.6" fill={navyColor} opacity="0.3"/>
+          {/* Wing struts for detail */}
+          <line x1="-3" y1="0" x2="-3" y2="-4.5" stroke={navyColor} strokeWidth="0.8" opacity="0.4"/>
+          <line x1="-3" y1="0" x2="-3" y2="4.5" stroke={navyColor} strokeWidth="0.8" opacity="0.4"/>
+          <line x1="3" y1="0" x2="3" y2="-2.5" stroke={navyColor} strokeWidth="0.8" opacity="0.4"/>
+          <line x1="3" y1="0" x2="3" y2="2.5" stroke={navyColor} strokeWidth="0.8" opacity="0.4"/>
         </g>
       </svg>
       
