@@ -3,16 +3,16 @@ import { createServer, type Server } from "http";
 import Stripe from "stripe";
 import { storage } from "./storage";
 import { setupAuth, isAuthenticated } from "./replitAuth";
-import { insertEntrySchema } from "@shared/schema";
+import { insertEntrySchema, insertCompetitionSchema } from "@shared/schema";
 import { z } from "zod";
 
-if (!process.env.STRIPE_SECRET_KEY) {
-  throw new Error('Missing required Stripe secret: STRIPE_SECRET_KEY');
+// Make Stripe optional for development
+let stripe: Stripe | null = null;
+if (process.env.STRIPE_SECRET_KEY) {
+  stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+    apiVersion: "2024-06-20",
+  });
 }
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: "2023-10-16",
-});
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Auth middleware
@@ -117,6 +117,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Payment routes
   app.post("/api/create-payment-intent", isAuthenticated, async (req: any, res) => {
     try {
+      if (!stripe) {
+        return res.status(503).json({ message: "Payment processing not configured" });
+      }
+
       const { amount, competitionId } = req.body;
       const userId = req.user.claims.sub;
 

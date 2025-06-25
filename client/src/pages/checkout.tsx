@@ -13,10 +13,11 @@ import { Button } from "@/components/ui/button";
 import { formatCurrency } from "@/lib/utils";
 import { MapPin, Clock, Trophy, Shield } from "lucide-react";
 
-if (!import.meta.env.VITE_STRIPE_PUBLIC_KEY) {
-  throw new Error('Missing required Stripe key: VITE_STRIPE_PUBLIC_KEY');
+// Make Stripe optional for development
+let stripePromise: Promise<any> | null = null;
+if (import.meta.env.VITE_STRIPE_PUBLIC_KEY) {
+  stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 }
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
 const CheckoutForm = ({ competition }: { competition: Competition }) => {
   const stripe = useStripe();
@@ -237,7 +238,7 @@ export default function Checkout() {
                 </div>
 
                 {/* Payment Form */}
-                {answer !== null && clientSecret ? (
+                {answer !== null && clientSecret && stripePromise ? (
                   <Elements stripe={stripePromise} options={{ clientSecret }}>
                     <div>
                       <h4 className="text-lg font-semibold text-navy-900 mb-4">
@@ -246,6 +247,13 @@ export default function Checkout() {
                       <CheckoutForm competition={competition} />
                     </div>
                   </Elements>
+                ) : answer !== null && !stripePromise ? (
+                  <div className="text-center py-8 bg-yellow-50 rounded-lg border-2 border-yellow-200">
+                    <Shield className="h-12 w-12 text-yellow-600 mx-auto mb-4" />
+                    <h4 className="text-lg font-semibold text-yellow-800 mb-2">Payment Not Available</h4>
+                    <p className="text-yellow-700 mb-4">Payment processing is not configured in development mode.</p>
+                    <p className="text-sm text-yellow-600">This competition entry would normally cost {formatCurrency(competition.entryPrice)}</p>
+                  </div>
                 ) : answer !== null ? (
                   <div className="text-center py-8">
                     <div className="animate-spin w-8 h-8 border-4 border-gold-500 border-t-transparent rounded-full mx-auto mb-4" />
