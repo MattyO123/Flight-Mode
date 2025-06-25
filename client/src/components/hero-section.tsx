@@ -61,8 +61,8 @@ export default function HeroSection() {
                 Enter Competition
               </Button>
               <Button 
-                variant="outline"
-                className="border-2 border-gold-400 text-gold-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gold-400 hover:text-navy-900 transition-all duration-300"
+                variant="secondary"
+                className="bg-white/20 backdrop-blur-sm border border-white/30 text-cream px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-navy-900 transition-all duration-300"
                 onClick={() => window.location.href = '#how-it-works'}
               >
                 How It Works

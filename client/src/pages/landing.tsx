@@ -60,7 +60,7 @@ export default function Landing() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-navy-50">
+      <section id="how-it-works" className="py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-navy-900 mb-6">
