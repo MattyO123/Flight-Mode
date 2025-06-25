@@ -36,7 +36,7 @@ export default function Competitions() {
   }) || [];
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-mist-white">
       <Navigation />
       
       {/* Header */}

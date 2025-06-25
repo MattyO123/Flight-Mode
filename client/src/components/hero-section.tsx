@@ -45,24 +45,24 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Hero Content */}
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight mb-6">
-              Win Your Dream <span className="text-gold-400">Holiday</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight mb-6 text-mist-white">
+              Win Your Dream <span className="text-champagne-gold">Holiday</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-mist-white/80 mb-8 leading-relaxed">
               Enter skill-based competitions to win luxury travel experiences. From Maldives retreats to Swiss Alps adventures.
             </p>
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
-                className="gold-gradient text-navy-900 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                className="gold-gradient text-deep-navy px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                 onClick={() => window.location.href = '/competitions'}
               >
                 Enter Competition
               </Button>
               <Button 
                 variant="secondary"
-                className="bg-white/20 backdrop-blur-sm border border-white/30 text-cream px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-navy-900 transition-all duration-300"
+                className="bg-midnight-teal/80 backdrop-blur-sm border border-champagne-gold/30 text-mist-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-champagne-gold hover:text-deep-navy transition-all duration-300"
                 onClick={() => window.location.href = '#how-it-works'}
               >
                 How It Works

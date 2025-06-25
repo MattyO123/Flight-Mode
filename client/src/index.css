@@ -5,72 +5,56 @@
 @tailwind utilities;
 
 :root {
-  /* Flight Mode Brand Colors */
-  --navy-900: hsl(210, 40%, 8%);
-  --navy-800: hsl(210, 35%, 12%);
-  --navy-700: hsl(210, 30%, 16%);
-  --navy-600: hsl(210, 25%, 20%);
-  --navy-500: hsl(210, 20%, 25%);
-  --navy-400: hsl(210, 15%, 35%);
-  --navy-300: hsl(210, 12%, 45%);
-  --navy-200: hsl(210, 10%, 60%);
-  --navy-100: hsl(210, 8%, 75%);
-  --navy-50: hsl(210, 6%, 93%);
-  
-  --gold-600: hsl(45, 70%, 50%);
-  --gold-500: hsl(45, 75%, 55%);
-  --gold-400: hsl(45, 80%, 60%);
-  --gold-300: hsl(45, 85%, 70%);
-  --gold-200: hsl(45, 90%, 80%);
-  --gold-100: hsl(45, 95%, 90%);
-  --gold-50: hsl(45, 100%, 96%);
-  
-  --cream: hsl(45, 25%, 92%);
-  --cream-dark: hsl(45, 20%, 88%);
+  /* Flight Mode Brand Colors - User Specified Palette */
+  --deep-navy: #0C1C2E;
+  --champagne-gold: #CBAF87;
+  --mist-white: #F5F5F2;
+  --storm-grey: #8D8F98;
+  --midnight-teal: #144552;
 
   /* Shadcn/UI Variables */
-  --background: var(--cream);
-  --foreground: var(--navy-900);
-  --muted: var(--navy-50);
-  --muted-foreground: var(--navy-400);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: var(--navy-900);
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: var(--navy-900);
-  --border: var(--navy-200);
-  --input: var(--navy-100);
-  --primary: var(--gold-500);
-  --primary-foreground: var(--navy-900);
-  --secondary: var(--navy-100);
-  --secondary-foreground: var(--navy-900);
-  --accent: var(--gold-100);
-  --accent-foreground: var(--navy-900);
+  --background: var(--mist-white);
+  --foreground: var(--deep-navy);
+  --muted: #F0F0ED;
+  --muted-foreground: var(--storm-grey);
+  --popover: var(--mist-white);
+  --popover-foreground: var(--deep-navy);
+  --card: var(--mist-white);
+  --card-foreground: var(--deep-navy);
+  --border: #E0E0DD;
+  --input: #EBEBE8;
+  --primary: var(--champagne-gold);
+  --primary-foreground: var(--deep-navy);
+  --secondary: #E8E8E5;
+  --secondary-foreground: var(--deep-navy);
+  --accent: var(--champagne-gold);
+  --accent-foreground: var(--deep-navy);
   --destructive: hsl(0, 84%, 60%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: var(--gold-500);
+  --destructive-foreground: var(--mist-white);
+  --ring: var(--champagne-gold);
   --radius: 0.5rem;
 }
 
 .dark {
-  --background: var(--navy-900);
-  --foreground: var(--cream);
-  --muted: var(--navy-700);
-  --muted-foreground: var(--navy-200);
-  --popover: var(--navy-800);
-  --popover-foreground: var(--cream);
-  --card: var(--navy-800);
-  --card-foreground: var(--cream);
-  --border: var(--navy-600);
-  --input: var(--navy-700);
-  --primary: var(--gold-500);
-  --primary-foreground: var(--navy-900);
-  --secondary: var(--navy-700);
-  --secondary-foreground: var(--cream);
-  --accent: var(--gold-200);
-  --accent-foreground: var(--navy-900);
+  --background: var(--deep-navy);
+  --foreground: var(--mist-white);
+  --muted: var(--midnight-teal);
+  --muted-foreground: var(--storm-grey);
+  --popover: var(--midnight-teal);
+  --popover-foreground: var(--mist-white);
+  --card: var(--midnight-teal);
+  --card-foreground: var(--mist-white);
+  --border: #2A4A57;
+  --input: var(--midnight-teal);
+  --primary: var(--champagne-gold);
+  --primary-foreground: var(--deep-navy);
+  --secondary: var(--midnight-teal);
+  --secondary-foreground: var(--mist-white);
+  --accent: var(--champagne-gold);
+  --accent-foreground: var(--deep-navy);
   --destructive: hsl(0, 62%, 30%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: var(--gold-500);
+  --destructive-foreground: var(--mist-white);
+  --ring: var(--champagne-gold);
 }
 
 @layer base {
@@ -89,11 +73,11 @@
 
 @layer components {
   .hero-gradient {
-    background: linear-gradient(135deg, hsl(210, 40%, 8%) 0%, hsl(210, 35%, 12%) 50%, hsl(210, 30%, 16%) 100%);
+    background: linear-gradient(135deg, var(--deep-navy) 0%, var(--midnight-teal) 100%);
   }
   
   .gold-gradient {
-    background: linear-gradient(135deg, hsl(45, 75%, 55%) 0%, hsl(45, 70%, 50%) 100%);
+    background: linear-gradient(135deg, var(--champagne-gold) 0%, #B8A070 100%);
   }
   
   .competition-card {

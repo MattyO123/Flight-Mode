@@ -27,7 +27,7 @@ export default function Navigation() {
   const currentNavItems = isAuthenticated ? authenticatedNavItems : navItems;
 
   return (
-    <nav className="bg-cream/95 navbar-blur sticky top-0 z-50 border-b border-navy-200">
+    <nav className="bg-mist-white/95 navbar-blur sticky top-0 z-50 border-b border-storm-grey/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -50,7 +50,7 @@ export default function Navigation() {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-navy-700 hover:text-gold-500 px-3 py-2 text-sm font-medium transition-colors"
+                  className="text-deep-navy hover:text-champagne-gold px-3 py-2 text-sm font-medium transition-colors"
                 >
                   {item.name}
                 </a>

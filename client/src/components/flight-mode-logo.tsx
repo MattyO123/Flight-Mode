@@ -9,8 +9,8 @@ export default function FlightModeLogo({
   variant = 'full',
   theme = 'light'
 }: FlightModeLogoProps) {
-  const goldColor = theme === 'dark' ? '#D4AF37' : '#B8860B';
-  const navyColor = theme === 'dark' ? '#F5F5DC' : '#1B1B3A';
+  const goldColor = '#CBAF87'; // Champagne Gold
+  const navyColor = theme === 'dark' ? '#F5F5F2' : '#0C1C2E'; // Mist White or Deep Navy
   
   if (variant === 'symbol') {
     return (

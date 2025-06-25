@@ -46,7 +46,7 @@ export default function Home() {
   const featuredCompetitions = activeCompetitions.slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-mist-white">
       <Navigation />
       
       {/* Welcome Section */}

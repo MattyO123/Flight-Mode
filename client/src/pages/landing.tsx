@@ -14,7 +14,7 @@ export default function Landing() {
   const featuredCompetitions = competitions?.slice(0, 3) || [];
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-mist-white">
       <Navigation />
       <HeroSection />
       
@@ -60,24 +60,24 @@ export default function Landing() {
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-20 bg-cream">
+      <section id="how-it-works" className="py-20 bg-mist-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-navy-900 mb-6">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-deep-navy mb-6">
               How It Works
             </h2>
-            <p className="text-xl text-navy-700 max-w-3xl mx-auto">
+            <p className="text-xl text-storm-grey max-w-3xl mx-auto">
               Three simple steps to win your dream holiday. All competitions are skill-based and legally compliant.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
-              <div className="bg-gold-500 text-white w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+              <div className="bg-champagne-gold text-deep-navy w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6">
                 1
               </div>
-              <h3 className="text-2xl font-serif font-bold text-navy-900 mb-4">Choose Competition</h3>
-              <p className="text-navy-700 leading-relaxed">
+              <h3 className="text-2xl font-serif font-bold text-deep-navy mb-4">Choose Competition</h3>
+              <p className="text-storm-grey leading-relaxed">
                 Browse our curated selection of luxury travel experiences and pick your dream destination.
               </p>
             </div>
@@ -178,19 +178,19 @@ export default function Landing() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-navy-900 text-white py-16">
+      <footer className="bg-deep-navy text-mist-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="col-span-1">
               <h3 className="text-2xl font-serif font-bold mb-4">Flight Mode</h3>
-              <p className="text-gray-400 mb-6">Win luxury travel experiences through skill-based competitions.</p>
+              <p className="text-storm-grey mb-6">Win luxury travel experiences through skill-based competitions.</p>
             </div>
             
             <div>
               <h4 className="text-lg font-semibold mb-4">Competitions</h4>
               <ul className="space-y-2">
-                <li><a href="/competitions" className="text-gray-400 hover:text-gold-400 transition-colors">Current Competitions</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-gold-400 transition-colors">Competition Rules</a></li>
+                <li><a href="/competitions" className="text-storm-grey hover:text-champagne-gold transition-colors">Current Competitions</a></li>
+                <li><a href="#" className="text-storm-grey hover:text-champagne-gold transition-colors">Competition Rules</a></li>
               </ul>
             </div>
             
@@ -211,13 +211,13 @@ export default function Landing() {
             </div>
           </div>
           
-          <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+          <div className="border-t border-midnight-teal mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <p className="text-storm-grey text-sm">
               © 2024 Flight Mode Competitions. All rights reserved. Registered in England & Wales.
             </p>
             <div className="flex items-center mt-4 md:mt-0">
-              <span className="text-gray-400 text-sm mr-4">18+ UK Residents Only.</span>
-              <span className="text-gray-400 text-sm">Skill-Based Competitions</span>
+              <span className="text-storm-grey text-sm mr-4">18+ UK Residents Only.</span>
+              <span className="text-storm-grey text-sm">Skill-Based Competitions</span>
             </div>
           </div>
         </div>
