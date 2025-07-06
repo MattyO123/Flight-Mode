@@ -5,7 +5,7 @@ import { Competition } from "@shared/schema";
 import CompetitionCard from "@/components/competition-card";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, Shield, Award, Users } from "lucide-react";
+import { Calendar, Shield, Award, Users, Trophy } from "lucide-react";
 
 export default function Landing() {
   const { data: competitions, isLoading } = useQuery<Competition[]>({
@@ -18,7 +18,7 @@ export default function Landing() {
     <div className="min-h-screen bg-soft-cream">
       <Navigation />
       <HeroSection />
-      
+
       {/* Featured Competitions */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,7 +30,7 @@ export default function Landing() {
               Discover luxury travel experiences and win your dream holiday through skill-based competitions.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {isLoading ? (
               Array.from({ length: 3 }).map((_, i) => (
@@ -48,7 +48,7 @@ export default function Landing() {
               </div>
             )}
           </div>
-          
+
           <div className="text-center mt-12">
             <Button 
               className="bg-gold-500 hover:bg-gold-600 text-white px-8 py-4 rounded-full text-lg font-semibold"
@@ -71,7 +71,7 @@ export default function Landing() {
               Three simple steps to win your dream holiday. All competitions are skill-based and legally compliant.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
               <div className="bg-champagne-gold text-off-navy w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
@@ -82,7 +82,7 @@ export default function Landing() {
                 Browse our curated selection of luxury travel experiences and pick your dream destination.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-champagne-gold text-off-navy w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
                 2
@@ -92,7 +92,7 @@ export default function Landing() {
                 Demonstrate your knowledge with our carefully crafted skill-based questions. No luck required.
               </p>
             </div>
-            
+
             <div className="text-center">
               <div className="bg-champagne-gold text-off-navy w-16 h-16 rounded-2xl flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
                 3
@@ -103,7 +103,7 @@ export default function Landing() {
               </p>
             </div>
           </div>
-          
+
           <div className="mt-16 bg-white rounded-2xl p-8 border-l-4 border-gold-500">
             <div className="flex items-start">
               <Shield className="w-6 h-6 text-gold-500 mt-1 mr-4 flex-shrink-0" />
@@ -130,7 +130,7 @@ export default function Landing() {
               Real stories from our competition winners who turned their dreams into reality.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -185,7 +185,7 @@ export default function Landing() {
             <div className="col-span-1">
               <h3 className="text-2xl font-serif font-bold mb-4">Flight Mode</h3>
               <p className="text-pale-slate mb-6">Win luxury travel experiences through skill-based competitions.</p>
-              
+
               {/* Trust Elements */}
               <div className="flex items-center space-x-4 mb-4">
                 <div className="flex items-center text-champagne-gold">
@@ -200,7 +200,7 @@ export default function Landing() {
                 </div>
               </div>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Competitions</h4>
               <ul className="space-y-2">
@@ -208,7 +208,7 @@ export default function Landing() {
                 <li><a href="#" className="text-pale-slate hover:text-champagne-gold transition-colors">Competition Rules</a></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Support</h4>
               <ul className="space-y-2">
@@ -217,7 +217,7 @@ export default function Landing() {
                 <li><a href="#" className="text-pale-slate hover:text-champagne-gold transition-colors">Winner Reviews</a></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Legal & Trust</h4>
               <ul className="space-y-2">
@@ -228,7 +228,7 @@ export default function Landing() {
               </ul>
             </div>
           </div>
-          
+
           <div className="border-t border-navy-charcoal mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-pale-slate text-sm mobile-text-spacing">
               © 2024 Flight Mode Competitions. All rights reserved. Registered in England & Wales.
