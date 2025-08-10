@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Buy Tickets Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>body{font-family:system-ui,Arial,sans-serif;max-width:720px;margin:24px auto;padding:0 16px}</style>
+  </head>
+  <body>
+    <h1>Buy Tickets (Test)</h1>
+
+    <form id="form" style="display:grid;gap:12px;max-width:420px">
+      <label>Competition ID
+        <input name="comp" placeholder="paste-competition-uuid" required />
+      </label>
+      <label>Full name
+        <input name="name" required />
+      </label>
+      <label>Email
+        <input type="email" name="email" required />
+      </label>
+      <label>Date of birth
+        <input type="date" name="dob" required />
+      </label>
+      <label>Quantity
+        <input type="number" name="qty" min="1" value="1" required />
+      </label>
+      <label><input type="checkbox" id="age" required /> I confirm I am 18+</label>
+      <button type="submit">Get Ticket Numbers</button>
+    </form>
+
+    <pre id="out" style="margin-top:16px;white-space:pre-wrap"></pre>
+
+    <script>
+      const FN_URL = "https://qcismnoyrrscvdtkdzxb.supabase.co/functions/v1/buy-tickets";
+
+      document.getElementById("form").addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const f = new FormData(e.target);
+        if (!document.getElementById("age").checked) {
+          alert("You must confirm you are 18+");
+          return;
+        }
+        const body = {
+          competitionId: f.get("comp"),
+          quantity: Number(f.get("qty")),
+          customer: {
+            name: f.get("name"),
+            email: f.get("email"),
+            dob: f.get("dob"),
+            userId: null
+          }
+        };
+        try {
+          const res = await fetch(FN_URL, {
+            method: "POST",
+            headers: {"Content-Type":"application/json"},
+            body: JSON.stringify(body)
+          });
+          const data = await res.json();
+          document.getElementById("out").textContent = JSON.stringify(data, null, 2);
+        } catch (err) {
+          document.getElementById("out").textContent = "Error: " + err.message;
+        }
+      });
+    </script>
+  </body>
+</html>
